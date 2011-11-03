@@ -1,3 +1,9 @@
+# revision 21460
+# category Package
+# catalog-ctan /support/fragmaster
+# catalog-date 2011-02-18 08:51:11 +0100
+# catalog-license gpl
+# catalog-version 1.6
 Name:		texlive-fragmaster
 Version:	1.6
 Release:	1
@@ -55,6 +61,7 @@ produces PDF and EPS files with the substitutions included.
 %doc %{_texmfdistdir}/doc/support/fragmaster/example/parabel_fm.gp
 %doc %{_texmfdistdir}/doc/support/fragmaster/example/parabel_fm.pdf
 %doc %{_texmfdistdir}/doc/support/fragmaster/fragmaster.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,3 +76,5 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
