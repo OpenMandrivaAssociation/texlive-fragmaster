@@ -1,4 +1,4 @@
-# revision 21460
+# revision 26313
 # category Package
 # catalog-ctan /support/fragmaster
 # catalog-date 2011-02-18 08:51:11 +0100
@@ -6,7 +6,7 @@
 # catalog-version 1.6
 Name:		texlive-fragmaster
 Version:	1.6
-Release:	2
+Release:	3
 Summary:	Using psfrag with PDFLaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/fragmaster
