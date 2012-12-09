@@ -66,3 +66,21 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+
+
+%changelog
+* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.6-3
++ Revision: 812266
+- Update to latest release.
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.6-2
++ Revision: 752091
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.6-1
++ Revision: 718501
+- texlive-fragmaster
+- texlive-fragmaster
+- texlive-fragmaster
+- texlive-fragmaster
+
