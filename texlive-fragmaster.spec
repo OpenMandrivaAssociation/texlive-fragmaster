@@ -1,18 +1,12 @@
-# revision 26313
-# category Package
-# catalog-ctan /support/fragmaster
-# catalog-date 2011-02-18 08:51:11 +0100
-# catalog-license gpl
-# catalog-version 1.6
 Name:		texlive-fragmaster
-Version:	1.6
-Release:	12
+Version:	26313
+Release:	1
 Summary:	Using psfrag with PDFLaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/fragmaster
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fragmaster.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fragmaster.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fragmaster.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fragmaster.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ EPS files and psfrag substitution definition files, and
 produces PDF and EPS files with the substitutions included.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -55,32 +49,14 @@ produces PDF and EPS files with the substitutions included.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/fragmaster/fragmaster.pl fragmaster
+ln -sf %{_texmfdistdir}/scripts/fragmaster/fragmaster.pl fragmaster
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-
-
-%changelog
-* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.6-3
-+ Revision: 812266
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.6-2
-+ Revision: 752091
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.6-1
-+ Revision: 718501
-- texlive-fragmaster
-- texlive-fragmaster
-- texlive-fragmaster
-- texlive-fragmaster
-
