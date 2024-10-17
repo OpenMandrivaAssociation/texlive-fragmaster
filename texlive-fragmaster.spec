@@ -3,7 +3,7 @@ Version:	26313
 Release:	2
 Summary:	Using psfrag with PDFLaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/fragmaster
+URL:		https://www.ctan.org/tex-archive/support/fragmaster
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fragmaster.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fragmaster.doc.r%{version}.tar.xz
